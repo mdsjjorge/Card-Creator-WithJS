@@ -2,71 +2,52 @@
 
 :root {
     --orange: hsl(34, 97%, 64%);
-    --varyDarkBlue: hsl(234, 12%, 34%);
+    --veryDarkGray: hsl(220, 2%, 38%);
     --grayishBlue: hsl(229, 6%, 66%);
     --veryLightGray: hsl(0, 0%, 98%);
     --weight1: 200;
     --weight2: 400;
     --weight3: 600;
 }
-
 body {
     font-size: 15px;
     font-family: 'Poppins', sans-serif;
     background-color: var(--veryLightGray);
 }
-h1{
+h1 {
     text-align: center;
+    color: var(--veryDarkGray);
+}
+h2 {
+    color: var(--veryDarkGray);
 }
 .attribution { 
     font-size: 11px; text-align: center; 
 }
 .attribution a { 
-    color: hsl(228, 45%, 44%); 
+    color: hsl(117, 62%, 38%); 
+    text-decoration: none;
 }
-
-@media (max-width: 400px) {
-    h1 {
-        font-size: 1.5rem;
-    }
-}
-
 .box p {
     color: var(--grayishBlue);
 }
-
 .box {
     border-radius: 5px;
     box-shadow: 0px 30px 40px -20px var(--grayishBlue);
     padding: 30px;
     margin: 20px;  
+    background-color: white;
 }
-
-@media (max-width: 450px) {
-    .box {
-        height: 200px;
-    }
-}
-
-@media (max-width: 950px) and (min-width: 450px) {
-    .box {
-        text-align: center;
-        height: 180px;
-    }
-}
-
 .orange {
     border-top: 3px solid var(--orange);
 }
-
-@media (min-width: 950px) {
-    
+@media (min-width: 650px) {    
     .row-container {
         display: flex;
         justify-content: center;
         align-items: center;
     }
     .box {
-        width: 40%;     
+        width: 60%;     
     }    
 }
