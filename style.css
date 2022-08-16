@@ -28,6 +28,10 @@ h2 {
     color: hsl(117, 62%, 38%); 
     text-decoration: none;
 }
+.insertCards {
+    display: flex;
+    justify-content: center;
+}
 .box p {
     color: var(--grayishBlue);
 }
@@ -35,19 +39,24 @@ h2 {
     border-radius: 5px;
     box-shadow: 0px 30px 40px -20px var(--grayishBlue);
     padding: 30px;
-    margin: 20px;  
+    margin: 15px;  
     background-color: white;
+    min-width: 250px;
+    max-width: 300px;
 }
 .orange {
     border-top: 3px solid var(--orange);
 }
-@media (min-width: 650px) {    
+@media (max-width: 750px) {   
+    .insertCards {
+        display: block;
+    } 
     .row-container {
         display: flex;
         justify-content: center;
         align-items: center;
     }
     .box {
-        width: 60%;     
+        width: 80%;     
     }    
 }
