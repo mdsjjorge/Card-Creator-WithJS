@@ -1,48 +1,38 @@
 
-// let recipeName = document.querySelector('.recipeName');
-// let recipeIngredients = document.querySelector('.recipeIngredients');
-// let recipeMethod = document.querySelector('.recipeMethod');
-
+// -------------------- createDiv ---------------------
 const createDiv = (k) => {
     let div = document.createElement('div');
     div.innerHTML = 
     `
-    <div class="row-container">            
-    <div class="box orange">
-    <div class="recipeName${k}"></div>
-    <div class="accordion accordion-flush" id="accordionFlushExample">
-    <div class="accordion-item">
-    <h2 class="accordion-header" id="flush-headingOne">
-    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-    Ingredients
-    </button>
-    </h2>
-    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-    <div class="accordion-body">
-    <ul class="recipeIngredients${k}">
-    </ul>
+    <div class="row-container">
+        <div class="box orange">
+            <div>
+                <div class="recipeName${k}"> </div>
+                <div>
+                    <div>
+                        <button class="accordion ">Ingredients</button>
+                        <div class="panel">
+                            <ul class="recipeIngredients${k}">
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div>
+                        <button class="accordion ">Method</button>
+                        <div class="panel">
+                            <ul class="recipeMethod${k}">
+                            </ul>
+                        </div>
+                    </div>                        
+                </div>                        
+            </div>
+        </div>
     </div>
-    </div>
-    </div>
-    <div class="accordion-item">
-    <h2 class="accordion-header" id="flush-headingTwo">
-    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-    Method
-    </button>
-    </h2>
-    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-    <div class="accordion-body">
-    <ul class="recipeMethod${k}">
-    </ul>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>    
     `
     document.querySelector('.insertCards').appendChild(div);
 }
 
+// -------------------- insertValues ---------------------
 const insertValues = (k) => {
 
     let h2 = document.createElement('h2');
@@ -62,9 +52,23 @@ const insertValues = (k) => {
     } 
 }
 
+// -------------------- cardsCreator ---------------------
 const cardsCreator = () => {
     for (let k = 0; k < recipe.length; k++) {
         createDiv(k);
-        insertValues(k);    
+        insertValues(k);            
+    }
+    
+    let accordion = document.querySelectorAll('.accordion');
+    for (let i = 0; i < accordion.length; i++) {
+        accordion[i].addEventListener('click', function() {
+            this.classList.toggle('active');
+            let next = this.nextElementSibling;
+            if (next.style.display === 'block') {
+                next.style.display = 'none';
+            } else {
+                next.style.display = 'block';
+            }
+        })            
     }
 }

@@ -53,6 +53,3 @@ let recipe = [
         ]
     }
 ]
-
-// refs 
-// https://www.receitasnestle.com.br/blog-post/receitas-para-churrasco

@@ -1,4 +1,4 @@
-/* de https://freefrontend.com/css-cards/ */
+/* --------------------  *  ----------------------- */
 
 :root {
     --orange: hsl(34, 97%, 64%);
@@ -20,6 +20,8 @@ h1 {
 }
 h2 {
     color: var(--veryDarkGray);
+
+/* -------------------- Cards----------------------- */
 }
 .attribution { 
     font-size: 11px; text-align: center; 
@@ -48,6 +50,8 @@ h2 {
 .orange {
     border-top: 3px solid var(--orange);
 }
+
+/* -------------------- Media query ----------------------- */
 @media (max-width: 750px) {   
     .insertCards {
         display: block;
@@ -61,3 +65,25 @@ h2 {
         width: 80%;     
     }    
 }
+
+/* -------------------- Accordion ----------------------- */
+.accordion {
+    background-color: white;
+    color: rgb(47, 46, 46);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    }
+.active, .accordion:hover {
+    background-color: rgb(244, 243, 239);
+    }
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+    }
