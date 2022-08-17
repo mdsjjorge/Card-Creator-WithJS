@@ -34,6 +34,7 @@ h2 {
     display: flex;
     justify-content: center;
     min-height: calc(100vh - 140px);
+    flex-wrap: wrap;
 }
 .box p {
     color: var(--grayishBlue);
@@ -44,15 +45,14 @@ h2 {
     padding: 30px;
     margin: 15px;  
     background-color: white;
-    min-width: 250px;
-    max-width: 300px;
+    width: 300px;
 }
 .orange {
     border-top: 3px solid var(--orange);
 }
 
 /* -------------------- Media query ----------------------- */
-@media (max-width: 750px) {   
+/* @media (max-width: 750px) {   
     .insertCards {
         display: block;
     } 
@@ -64,7 +64,7 @@ h2 {
     .box {
         width: 80%;     
     }    
-}
+} */
 
 /* -------------------- Accordion ----------------------- */
 .accordion {
