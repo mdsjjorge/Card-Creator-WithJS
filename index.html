@@ -16,10 +16,17 @@
 </head>
 <body onload="cardsCreator()">
 
-    <div>
+    <!-- <div>
         <h1>
             Cards creator
         </h1>
+    </div> -->
+
+    <div class="input-wrap">
+            <input class="input-filter" type="text" placeholder="recipe name"/> 
+    </div>
+    <div>
+        <ul id="name-list"> </ul>
     </div>
 
     <div class="insertCards"> </div>
@@ -27,15 +34,15 @@
     <footer>
         <p class="attribution">
         Reference: <br>
-        Cards: <a href="https://freefrontend.com/css-cards/" target="_blank"> Freefrontend</a>. <br>
-        Recipes: <a href="https://www.receitasnestle.com.br/blog-post/receitas-para-churrasco " target="_blank"> Receitas Nestle</a>. <br>
+        Cards: <a href="https://freefrontend.com/css-cards/" target="_blank"> Freefrontend</a> <br>
+        Recipes: <a href="https://www.receitasnestle.com.br/blog-post/receitas-para-churrasco " target="_blank"> Receitas Nestle</a> <br>
         Coded by <a target="_blank" href="https://github.com/mdsjjorge">Jorge Mendonca</a> 
-        with <a href="https://getbootstrap.com/docs/5.0/getting-started/introduction/" target="_blank"> Bootstrap</a>. <br>
-        </p>
+
     </footer>
     
-    <script src="script.js"></script>
-    <script src="recipe.js"></script>
+    <script src="cardsRender.js"></script>
+    <script src="cardsSearch.js"></script>
+    <script src="recipeList.js"></script>
 
 </body>
 </html>
